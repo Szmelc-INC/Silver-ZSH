@@ -1,4 +1,4 @@
-# Silver-ZSH
+# $ilver-ZSH
 > #### Scripts, configs and extras for ZSH
 
 ---
