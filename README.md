@@ -25,8 +25,10 @@ cd &&mv .zshrc .zshrc-old && mv .p10k.zsh .p10k.zsh-old
 ```
 > Install Configs:
 ```bash
-cd && wget https://raw.githubusercontent.com/serainox420/Silver-ZSH/refs/heads/personal/config/.zshrc && wget https://raw.githubusercontent.com/serainox420/Silver-ZSH/refs/heads/personal/config/.p10k.zsh && source .zshrc
+cd && wget https://raw.githubusercontent.com/serainox420/Silver-ZSH/refs/heads/personal/config/minimal/.zshrc && wget https://raw.githubusercontent.com/serainox420/Silver-ZSH/refs/heads/personal/config/minimal/.p10k.zsh && source .zshrc
 ```
+> To install different configs, replace `/minimal/` in URL with correct config folder name
+
 > Set ZSH as default shell:
 ```bash
 chsh -s /bin/zsh
