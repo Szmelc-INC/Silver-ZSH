@@ -10,6 +10,7 @@
 ---
 
 ### Quick install
+> `config/minimal` as example \
 > Backup old config (optional):
 ```bash
 cd &&mv .zshrc .zshrc-old && mv .p10k.zsh .p10k.zsh-old
