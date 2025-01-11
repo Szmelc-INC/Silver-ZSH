@@ -1,8 +1,8 @@
-# $ilver-ZSH
-> #### Scripts, configs and extras for ZSH
+![Animated SVG](https://raw.githubusercontent.com/serainox420/serainox420/refs/heads/personal/STUFF/silver-zsh.svg)
+### **<p align="center">┏ Scripts, configs and extras for ZSH ┓</p>**
 
 ---
-## Dependencies:
+# Dependencies:
 **Ubuntu / Debian:** `sudo apt install zsh zoxide` \
 **Arch:** `sudo pacman -S zsh zoxide` \
 **Alpine:** `sudo apk add zsh && sudo apk add cargo && cargo install zoxide` \
@@ -11,13 +11,13 @@
 
 ---
 
-## Configs:
+# Configs:
 > **Minimal** (Entropy v9) \
 ![image](https://github.com/user-attachments/assets/5d50c03f-8303-418c-b736-fcc2ed1bce93)
 
 ---
 
-## Install
+# Install
 > `config/minimal` as example \
 > Backup old config (optional):
 ```bash
