@@ -3,11 +3,11 @@
 
 ---
 # Dependencies:
-**Ubuntu / Debian:** `sudo apt install zsh zoxide git` \
-**Arch:** `sudo pacman -S zsh zoxide git` \
-**Alpine:** `sudo apk add zsh git && sudo apk add cargo && cargo install zoxide` \
-**RedHat:** `sudo yum install zsh git && sudo yum install rust cargo && cargo install zoxide` \
-**Fedora:** `sudo dnf install zsh zoxide git`
+**Ubuntu / Debian:** `sudo apt install zsh zoxide git fzf` \
+**Arch:** `sudo pacman -S zsh zoxide git fzf` \
+**Alpine:** `sudo apk add zsh git && sudo apk add cargo && cargo install zoxide fzf` \
+**RedHat:** `sudo yum install zsh git && sudo yum install rust cargo && cargo install zoxide fzf` \
+**Fedora:** `sudo dnf install zsh zoxide git fzf`
 
 ---
 
