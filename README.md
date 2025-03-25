@@ -21,7 +21,7 @@
 > `config/minimal` as example \
 > Backup old config (optional):
 ```bash
-cd &&mv .zshrc .zshrc-old && mv .p10k.zsh .p10k.zsh-old
+cd && mv .zshrc .zshrc-old && mv .p10k.zsh .p10k.zsh-old
 ```
 > Install Configs:
 ```bash
