@@ -1,0 +1,8 @@
+post_install() {
+  echo "==> silver-zsh installed."
+  echo "    Run 'setup-silver-zsh' as your user to install configs interactively."
+}
+
+post_upgrade() {
+  post_install
+}
