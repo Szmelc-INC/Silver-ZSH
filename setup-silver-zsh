@@ -1,0 +1,71 @@
+#!/bin/bash
+
+set -e
+ZSHRC="$HOME/.zshrc"
+P10K="$HOME/.p10k.zsh"
+TMPDIR="$(mktemp -d)"
+cd "$TMPDIR"
+
+echo "[*] Installing Silver-ZSH config..."
+
+# Fetch base configs
+curl -sO https://raw.githubusercontent.com/Szmelc-INC/Silver-ZSH/refs/heads/personal/config/minimal/.zshrc
+curl -sO https://raw.githubusercontent.com/Szmelc-INC/Silver-ZSH/refs/heads/personal/config/minimal/.p10k.zsh
+
+# Ask for Better-RunCommand
+read -rp "Include Better-RunCommand enhancements? [Y/n]: " ans
+ans=${ans,,}
+if [[ "$ans" =~ ^(y|yes)?$ ]]; then
+    curl -sO https://raw.githubusercontent.com/Szmelc-INC/Silver-ZSH/refs/heads/personal/betterrc.rc
+    cat betterrc.rc >> .zshrc
+    rm betterrc.rc
+    echo "[*] Added Better-RunCommand features."
+fi
+
+# Handle .zshrc
+if [[ -f "$ZSHRC" ]]; then
+    echo "[!] $ZSHRC already exists."
+    select opt in "Replace (backup to .zshrc.bak)" "Append"; do
+        case $opt in
+            "Replace"*)
+                cp "$ZSHRC" "$ZSHRC.bak"
+                cp .zshrc "$ZSHRC"
+                echo "[*] Replaced .zshrc (backup saved)."
+                break
+                ;;
+            "Append")
+                cat .zshrc >> "$ZSHRC"
+                echo "[*] Appended to existing .zshrc."
+                break
+                ;;
+        esac
+    done
+else
+    cp .zshrc "$ZSHRC"
+    echo "[*] Installed new .zshrc."
+fi
+
+# Handle .p10k.zsh
+if [[ -f "$P10K" ]]; then
+    echo "[!] $P10K already exists."
+    select opt in "Replace (backup to .p10k.zsh.bak)" "Skip"; do
+        case $opt in
+            "Replace"*)
+                cp "$P10K" "$P10K.bak"
+                cp .p10k.zsh "$P10K"
+                echo "[*] Replaced .p10k.zsh (backup saved)."
+                break
+                ;;
+            "Skip")
+                echo "[*] Skipped .p10k.zsh."
+                break
+                ;;
+        esac
+    done
+else
+    cp .p10k.zsh "$P10K"
+    echo "[*] Installed new .p10k.zsh."
+fi
+
+rm -rf "$TMPDIR"
+echo "✅ Done. Run \`zsh\` to test the shell."
