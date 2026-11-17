@@ -24,7 +24,7 @@
           meta = {
             description = "Installer/setup for the Silver ZSH environment";
             homepage = "https://github.com/Szmelc-INC/Silver-ZSH";
-            license = pkgs.lib.licenses.mit;
+            license = pkgs.lib.licenses.gpl3Only;
             mainProgram = "setup-silver-zsh";
             platforms = pkgs.lib.platforms.linux;
           };
